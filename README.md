@@ -1,7 +1,4 @@
 === Woo Payments By Shipping ===
-
-Tags: woocommerce
-
 This plugin lets you select payment gateways for shipping methods in WooCommerce
 
 
