@@ -34,8 +34,8 @@
       }
 
       $payment_settings['woo-payments-by-shipping'] = array(
-        'title'     => 'Available payments',
-        'desc_tip'  => 'Select available payments for this shipping method',
+        'title'     => __('Available payments', 'woo-payments-by-shipping'),
+        'desc_tip'  => __('Select available payments for this shipping method', 'woo-payments-by-shipping'),
         'class'     => 'agano',
         'type'      => 'multiselect',
         'options'   => $options_array
