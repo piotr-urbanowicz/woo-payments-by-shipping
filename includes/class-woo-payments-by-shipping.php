@@ -51,22 +51,24 @@
 
     //unset payments on checkout page
     public function woo_payments_by_shipping_unset_payments($gateways) {
-      $chosen_shipping_methods = WC()->session->get('chosen_shipping_methods');
-      $chosen_shipping_method = $chosen_shipping_methods[0];
+      if (!is_admin())  {
+        $chosen_shipping_methods = WC()->session->get('chosen_shipping_methods');
+        $chosen_shipping_method = $chosen_shipping_methods[0];
 
-      $pos = strrpos($chosen_shipping_method, ":");
-      if ($pos > 0) {  
-        $method_id = intval(substr($chosen_shipping_method, $pos+1));
-        
-        //get details of instance
-        $shipping_method2 = WC_Shipping_Zones::get_shipping_method( $method_id );
-        $options = $shipping_method2->get_instance_option("woo-payments-by-shipping");
+        $pos = strrpos($chosen_shipping_method, ":");
+        if ($pos > 0) {  
+          $method_id = intval(substr($chosen_shipping_method, $pos+1));
 
-        //unset
-        foreach($gateways as $gateway)
-        {
-          if (!in_array($gateway->id, $options)) {
-            unset($gateways[$gateway->id]);
+          //get details of instance
+          $shipping_method2 = WC_Shipping_Zones::get_shipping_method( $method_id );
+          $options = $shipping_method2->get_instance_option("woo-payments-by-shipping");
+
+          //unset
+          foreach($gateways as $gateway)
+          {
+            if (!in_array($gateway->id, $options)) {
+              unset($gateways[$gateway->id]);
+            }
           }
         }
       }
