@@ -10,5 +10,8 @@ In some cases you don't want to have some payment methods to be available under 
 
 == Changelog ==
 
+= 1.0.1 =
+* Broken nav-menus fixed
+
 = 1.0.0 =
 * Initial commit
