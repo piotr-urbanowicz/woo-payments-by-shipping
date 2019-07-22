@@ -3,7 +3,7 @@
   Plugin Name: Woo Payments By Shipping
   Plugin URI: https://github.com/piotr-urbanowicz/woo-payments-by-shipping
   Description: Lets you select payments for particaluar shipping methods in WooCommerce
-  Version: 1.0.0
+  Version: 1.0.2
   Author: Piotr Urbanowicz
   Author URI: https://github.com/piotr-urbanowicz
   License: GPL2

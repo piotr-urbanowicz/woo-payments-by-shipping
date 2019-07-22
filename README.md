@@ -10,6 +10,9 @@ In some cases you don't want to have some payment methods to be available under 
 
 == Changelog ==
 
+= 1.0.2 =
+* Support for WooCommerce 3.4.0 and upper versions
+
 = 1.0.1 =
 * Broken nav-menus fixed
 

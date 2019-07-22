@@ -12,6 +12,8 @@
     public function woo_payments_by_shipping_init() {
       if (is_admin()) {
         $shipping_methods = WC()->shipping->get_shipping_methods();
+		WC()->payment_gateways->payment_gateways();    
+		
         foreach($shipping_methods as $shipping_method) 
         {
           add_filter( 'woocommerce_shipping_instance_form_fields_' . $shipping_method->id, array($this, 'woo_payments_by_shipping_add_settings'));
